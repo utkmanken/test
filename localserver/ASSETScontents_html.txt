@@ -1,0 +1,2 @@
+HTML/title.html
+HTML/mode_story.html

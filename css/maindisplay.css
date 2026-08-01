@@ -1,0 +1,312 @@
+
+
+/*メインプレイ画面*/
+
+    #characanvas{
+        position: absolute;
+        bottom: 35.15625%;
+        width: 95%;
+        height: 55%;
+    }
+
+    #kari{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #textframe {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column; 
+        bottom: 0;
+        width: 100%;
+        aspect-ratio: 1.6;
+        z-index: 5;
+        background-image: url(../material/frame/text_frame.svg);
+    }
+
+    #textframe.text_hidden{
+        animation:textbox_hidden 1s ease-in infinite alternate;
+    }
+
+    .maintext.text_fade{
+        animation:text_fade 1s ease-in infinite alternate;
+    }
+
+    @keyframes textbox_hidden{
+
+        20%{
+            transform: translateY(0);
+        }
+
+        100%{
+            transform: translateY(100%);
+        }
+    }
+
+    @keyframes text_fade{
+
+        0%{
+            opacity: 1;
+        }
+
+        20%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 0;
+        }
+    }
+
+    #textbox{
+        position: absolute;
+        top: 20%;
+        
+        width: 85%;
+        height: 65%;
+        z-index: 5;
+        word-break: normal;
+    }
+
+    #namebox{
+        position: absolute;
+        width: 86%;
+        height: 20%;
+        z-index: 6;
+        top: 5%;
+
+        display: flex;
+        align-items: center;
+        }
+
+    #name_frame{
+        position: absolute;
+        width: 50%;
+        left: -2%;
+    }
+
+    #charaname{
+        text-align: center;
+        font-family: Koguchi;
+        transform: scaleY(1.75) skewX(-11deg);
+        font-size: max(14px,4.8cqw);
+
+        color: white;
+        font-feature-settings: "palt";
+        letter-spacing : 1px;
+        
+        -webkit-text-stroke-width: 1.4px;
+        -webkit-text-stroke-color: #202040;
+        paint-order: stroke;
+        }
+
+
+    #mainmenublock{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        height: 10%;
+        width: 93%;
+        background-size: cover;
+        background-image: url(../material/frame/menu_frame.svg);
+    }
+
+    #menumemoblock{
+        position: absolute;
+
+        height: 60%;
+        top: 20%;
+
+        right: 4%;
+        display: flex;
+        justify-content: flex;
+        gap: 5%;
+        flex-direction: row-reverse;
+        align-content: flex-start;
+    }
+
+
+    #mainmenubutton{
+        top: 0;
+        right: 0;
+        height: 100%;
+        aspect-ratio: 1;
+        float: right;
+        background-image: url(../material/button/play_menu.svg);
+
+        border: none;
+        box-shadow: 0 0 8px #101010;
+        
+    }
+
+
+    /*スキップボタン追加*/
+    #story_skip{
+        top: 0;
+        right: 0;
+        height: 100%;
+        aspect-ratio: 1;
+        float: right;
+        background-image: url(../material/button/skip_button.svg);
+
+        border: none;
+        box-shadow: 0 0 8px #101010;
+
+    }
+
+
+    #mainmenubutton:active{
+        filter:brightness(80%)
+    }
+
+    #story_skip:active{
+        filter:brightness(80%)
+    }
+
+    #backlogbutton{
+        height: 100%;
+        aspect-ratio: 5/2;
+        float: right;
+
+    }
+
+    .playbutton{
+        top: 100%;
+        right: 4%;
+        height: 100%;
+        aspect-ratio: 7 / 2 ;
+    }
+
+    #nextbutton{
+        position:absolute;
+        top: 75%;
+        right: 10%;
+        z-index: 7;
+    }
+
+    #textcontent{
+        color: white;
+        font-size: max(12px,4.5cqw);
+        font-feature-settings: "palt";
+
+        -webkit-text-stroke-width: 2.7px;
+        -webkit-text-stroke-color: #202040;
+        paint-order: stroke;
+        }
+
+
+    #gamebg{
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../material/back_image/library.jpg");
+        filter: saturate(90%) brightness(120%);
+    }
+
+/*メニュー画面*/
+
+    #menublock{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 50%;
+        background-color: gray;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+    .menubotton{
+        width: 100%;
+        height: 20%;
+    }
+
+    /*バックログ機能*/
+
+    .log_display{
+        position: absolute;
+        width: 80%;
+        height: 65%;
+        top: 14%;
+        left:50%;
+        transform: translate(-50%, 0);
+
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+
+    .log_box{
+        position: relative;
+        width: 100%;
+        height: calc(100% /5);
+
+    }
+
+
+    .line {
+        position: absolute;
+        height: 1cqw;
+        background-color: white;
+        border: none;
+
+        transform: scaleY(25%);
+        transform-origin: bottom center;
+        
+        right: 0.5%;
+        left: 0.5%;
+        bottom: 0%;
+
+    }
+
+    .top_line {
+        position: absolute;
+        height: 1cqw;
+        background-color: white;
+        border: none;
+
+        transform: scaleY(25%);
+        transform-origin: top center;
+        
+        right: 0.5%;
+        left: 0.5%;
+        top: 0%;
+
+    }
+
+    .chara_icon{
+        position: absolute;
+        left: 2%;
+        top: 8%;
+
+        height: 35%;
+        aspect-ratio: 1;
+
+        background-color: white;
+
+    }
+
+    .log_text{
+        position: absolute;
+        height: 40%;
+        width: 96%;
+        background-color: azure;
+
+        left: 2%;
+        bottom: 10%;
+        font-size: 2cqw;
+    }
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/maindisplay.css">
+        <title>utktanteiroku_sample</title>
+    </head>
+    <body>
+        <div class="base" id="maindisplaybase">
+            <div id="contentdiv" class="top"></div><!--タイトル画面の上に表示する用のdiv-->
+            <div id="alertdiv" class="top"></div><!--確認画面用のdiv-->
+            <div id="gamebg"></div><!--ゲーム用の背景用-->
+            <div id="characanvas"><img src="../../material/chara_image/A_Kabura_webp/chara_A01.webp
+                " id="kari"></div><!--キャラクター表示領域-->
+            <div id="mainmenublock"><!--メインメニューボタン用-->
+                <div id="menumemoblock">
+                    <button id="mainmenubutton" class="systembutton"></button>
+
+                                        <!--スキップボタン追加-->
+                    <button id="story_skip" class="systembutton">
+                    </button >
+
+                    <button id="backlogbutton" class="systembutton">
+                        探偵メモ
+                    </button >
+                </div>
+            </div>
+ 
+            <div id="textframe" class=""><!--テキストの後ろに配置されるゲーム上のテキストの見かけの枠-->
+                <div id="namebox" class="maintext ">
+                    <img src="../../material/frame/name_frame.svg" id="name_frame" class="">
+                    <span id="charaname">
+                        芒 カブラ
+                    </span>
+                </div><!--実際にキャラ名を表示させるdiv-->
+                <div id="textbox" class="maintext">
+                    <p id="textcontent">
+                        class="top"のdisplayがnoneになっていて、
+                        素の状態では表示されませんので表示させる場合にはdisplayを変更してください
+                    </p>
+                </div><!--実際にテキストを表示させるdiv-->
+                <button id="nextbutton">
+                    次へ
+                </button>
+            </div>
+        </div>
+        
+    </body>
+</html>

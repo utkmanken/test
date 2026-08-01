@@ -1,0 +1,72 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+        background-color: #262626;
+        font-size: min(100px); 
+    }
+
+    
+ 
+
+    @font-face{
+        font-family: "Koguchi";
+        src: url("../font/851Gkktt_005.ttf") format("truetype");
+    }
+
+    @font-face{
+        font-family: "Kaiso";
+        src: url("../font/Kaisotai-Next-UP-B.otf") format("opentype");
+    }
+
+/* <!-- 画面比は9:16固定で幅の狭い方に合わせる--> */
+
+    .base {
+        position: relative;
+        aspect-ratio: 9 / 16;
+        width: min(100lvw, calc(100vh * 9 / 16));
+        height: auto;
+        background-color: white;
+        margin: 0 auto;
+        z-index: 1;
+        container-type: inline-size;
+
+    }
+
+    .top{
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        position:absolute;
+        top: 0;
+        left: 0;
+
+
+        display: none;
+
+
+    }
+
+    
+/*戻るボタン*/
+    
+    .backbutton{
+        position: absolute;
+        top:5%;
+        left: 80%;
+    }
+
+/*カメラ機能*/
+
+    .camera_block{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translate(0, -60%);
+        width: 80%;
+        aspect-ratio: 1;
+        background-color: gray;
+
+    }

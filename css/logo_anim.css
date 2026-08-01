@@ -1,0 +1,74 @@
+
+    #titlelogo.flash{
+        animation:flash 2s linear alternate forwards;
+    }
+
+    @keyframes flash{
+        0%{
+            opacity: 0;
+        }
+        10%{
+            opacity: 1;
+        }
+
+        20%{
+            opacity: 1;
+        }
+
+        21%{
+            opacity: 0;
+        }
+
+        38%{
+            opacity: 0;
+        }
+
+        40%{
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+    #mainlogotype.move{
+        animation:move 3.5s alternate;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.600, 0.195, 0.825, 1.020); /* custom */
+    }
+
+    @keyframes move{
+        0%{
+        }
+
+        100%{
+            top: 0;
+        }
+    }
+
+
+    #pendant.pull{
+        animation:pull 3s ease alternate ;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes pull{
+        0%{
+            transform: translatey(0);
+        }
+
+        50%{
+            transform: translatey(20%);
+        }
+
+        65%{
+            transform: translatey(20%);
+        }
+
+        100%{
+            transform: translatey(0);
+        }
+    }
+
+

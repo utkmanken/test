@@ -35,7 +35,7 @@
     #mainlogotype.move{
         animation:move 3.5s alternate;
         animation-fill-mode: forwards;
-        animation-timing-function: cubic-bezier(0.455, 0.197, 0.576, 0.998); /* custom */
+        animation-timing-function: cubic-bezier(0.455, 0.197, 0.576, 0.959); /* custom */
     }
 
     @keyframes move{
